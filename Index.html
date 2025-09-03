@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Little Bookshop • Vue Router</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Minimal nav styling to match your palette */
+    .app-shell { max-width: 1100px; margin: 0 auto; }
+    .topnav { display:flex; gap:10px; align-items:center; padding:12px 16px; }
+    .topnav a { padding:8px 12px; border-radius:8px; font-weight:600; }
+    .router-link-active { background: rgba(255,255,255,.18); }
+    header { background: linear-gradient(0deg,#5a3d94,#6b4fad); color:#fff; }
+    main { padding: 24px 16px 48px; }
+  </style>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <!-- Header + Nav -->
+    <header>
+      <nav class="topnav">
+        <strong>Little Bookshop</strong>
+        <!-- Vue Router links -->
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/contact">Contact</router-link>
+      </nav>
+    </header>
+
+    <!-- Routed views render here -->
+    <main>
+      <router-view></router-view>
+    </main>
+
+    <footer>
+      <p style="text-align:center;color:#fff;padding:18px 12px;background:#5a3d94;border-top:1px solid rgba(255,255,255,.12)">
+        © 2025 Little Bookshop
+      </p>
+    </footer>
+  </div>
+
+  <!-- Vue & Router (CDN) -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.prod.js"></script>
+
+  <!-- App files -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
